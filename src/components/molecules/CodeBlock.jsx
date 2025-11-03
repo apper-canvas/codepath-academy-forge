@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
-
 const CodeBlock = ({ code, language = "javascript", runnable = false, onRun }) => {
-  const [output, setOutput] = useState("");
+const [output, setOutput] = useState("");
   const [isRunning, setIsRunning] = useState(false);
-
+  const [copied, setCopied] = useState(false);
   const highlightSyntax = (code, language) => {
     if (!code) return "";
     
@@ -37,6 +37,30 @@ const CodeBlock = ({ code, language = "javascript", runnable = false, onRun }) =
     highlighted = highlighted.replace(/(\/\/.*$|\/\*[\s\S]*?\*\/)/gm, '<span class="syntax-comment">$1</span>');
 
     return highlighted;
+  };
+
+const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      toast.success("Code copied to clipboard!");
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      // Fallback for older browsers or when clipboard API fails
+      try {
+        const textArea = document.createElement('textarea');
+        textArea.value = code;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        setCopied(true);
+        toast.success("Code copied to clipboard!");
+        setTimeout(() => setCopied(false), 2000);
+      } catch (fallbackError) {
+        toast.error("Failed to copy code. Please select and copy manually.");
+      }
+    }
   };
 
   const handleRun = async () => {
@@ -74,6 +98,21 @@ const CodeBlock = ({ code, language = "javascript", runnable = false, onRun }) =
           <ApperIcon name="Code" size={16} className="text-primary" />
           <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
         </div>
+<Button
+          onClick={handleCopy}
+          variant="ghost"
+          size="sm"
+          className="text-gray-400 hover:text-white hover:bg-surface/50 min-w-[44px]"
+        >
+          <ApperIcon 
+            name={copied ? "Check" : "Copy"} 
+            size={16} 
+            className={copied ? "text-success" : ""} 
+          />
+          <span className="ml-1 hidden sm:inline">
+            {copied ? "Copied" : "Copy"}
+          </span>
+        </Button>
         {runnable && (
           <Button
             onClick={handleRun}
