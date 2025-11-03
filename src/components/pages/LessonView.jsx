@@ -79,10 +79,10 @@ const LessonView = () => {
     } catch (err) {
       toast.error("Failed to bookmark lesson");
     }
-  };
+};
 
-  const isCompleted = progress.completedLessons.includes(parseInt(lessonId));
-  const isBookmarked = progress.bookmarks.some(b => b.lessonId === parseInt(lessonId));
+  const isCompleted = progress.completedLessons?.includes(parseInt(lessonId)) ?? false;
+  const isBookmarked = progress.bookmarks?.some(b => b.lessonId === parseInt(lessonId)) ?? false;
 
   if (loading) return <Loading type="lesson" />;
   if (error) return <Error message={error} onRetry={loadData} type="lesson" />;
