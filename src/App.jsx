@@ -15,6 +15,7 @@ import QuizPage from "@/components/pages/QuizPage";
 import MyLearning from "@/components/pages/MyLearning";
 import ProgressPage from "@/components/pages/ProgressPage";
 import BookmarksPage from "@/components/pages/BookmarksPage";
+import CertificatesPage from "@/components/pages/CertificatesPage";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -38,7 +39,7 @@ const App = () => {
           {/* Page Content */}
           <main className="min-h-[calc(100vh-4rem)]">
             <AnimatePresence mode="wait">
-              <Routes>
+<Routes>
                 <Route path="/" element={<CourseCatalog />} />
                 <Route path="/course/:courseId" element={<CourseDetail />} />
                 <Route path="/lesson/:courseId/:moduleId/:lessonId" element={<LessonView />} />
@@ -46,6 +47,7 @@ const App = () => {
                 <Route path="/learning" element={<MyLearning />} />
                 <Route path="/progress" element={<ProgressPage />} />
                 <Route path="/bookmarks" element={<BookmarksPage />} />
+                <Route path="/certificates" element={<CertificatesPage />} />
               </Routes>
             </AnimatePresence>
           </main>

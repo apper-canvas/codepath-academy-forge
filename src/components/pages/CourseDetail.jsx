@@ -51,9 +51,25 @@ const CourseDetail = () => {
     return variants[difficulty] || "default";
   };
 
-  const getOverallProgress = () => {
+const getOverallProgress = () => {
     if (!course || !progress) return 0;
     return course.totalLessons > 0 ? Math.round((progress.completedLessons.length / course.totalLessons) * 100) : 0;
+  };
+
+  const isCompleted = getOverallProgress() === 100;
+  const hasCompletionDate = progress?.completionDate;
+
+  const handleGenerateCertificate = async () => {
+    try {
+      const { certificateService } = await import("@/services/api/certificateService");
+      await certificateService.generate({
+        courseId: parseInt(courseId),
+        completionDate: progress.completionDate || new Date().toISOString()
+      });
+      toast.success("Certificate generated successfully!");
+    } catch (err) {
+      toast.error("Failed to generate certificate");
+    }
   };
 
   const handleStartLesson = (moduleId, lessonId) => {
@@ -131,7 +147,37 @@ const CourseDetail = () => {
               lessons complete
             </p>
           </div>
-        </div>
+</div>
+
+        {/* Certificate Section */}
+        {isCompleted && hasCompletionDate && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
+            className="bg-gradient-to-br from-success/10 to-green-600/10 border border-success/30 rounded-lg p-6"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <ApperIcon name="Award" size={24} className="text-success" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Course Completed!</h3>
+                  <p className="text-sm text-gray-400">
+                    Completed on {new Date(progress.completionDate).toLocaleDateString()}
+                  </p>
+                </div>
+              </div>
+              <Button
+                onClick={handleGenerateCertificate}
+                variant="success"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                <ApperIcon name="Download" size={16} />
+                Get Certificate
+              </Button>
+            </div>
+          </motion.div>
+        )}
       </motion.div>
 
       {/* Course Modules */}

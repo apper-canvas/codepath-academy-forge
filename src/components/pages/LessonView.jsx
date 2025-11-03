@@ -41,13 +41,17 @@ const LessonView = () => {
     loadData();
   }, [courseId, moduleId, lessonId]);
 
-  const handleCompleteLesson = async (lessonIdToComplete) => {
+const handleCompleteLesson = async (lessonIdToComplete) => {
     try {
       await userProgressService.markLessonComplete(parseInt(courseId), lessonIdToComplete);
       setProgress(prev => ({
         ...prev,
         completedLessons: [...prev.completedLessons, lessonIdToComplete]
       }));
+      
+      // Check if course is now completed
+      await userProgressService.checkCourseCompletion(parseInt(courseId));
+      
       toast.success("Lesson completed!");
     } catch (err) {
       toast.error("Failed to mark lesson as complete");

@@ -102,6 +102,37 @@
   border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+:::-webkit-scrollbar-thumb:hover {
   background: #64748B;
+}
+
+/* Certificate Styles */
+.certificate-border {
+  position: relative;
+}
+
+.certificate-border::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.certificate-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(99, 102, 241, 0.1);
+}
+
+/* Print Styles for Certificates */
+@media print {
+  .certificate {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
 }

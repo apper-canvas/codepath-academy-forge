@@ -1,3 +1,5 @@
+import { courseService } from './courseService';
+
 class UserProgressService {
   constructor() {
     this.storageKey = 'codepath_user_progress';
@@ -28,26 +30,27 @@ class UserProgressService {
   async getProgress(courseId) {
     await this.delay();
     const allProgress = await this.getAllProgress();
-    return allProgress[courseId] || {
+return allProgress[courseId] || {
       completedLessons: [],
       quizScores: {},
       bookmarks: [],
       lastAccessed: null,
-      startedDate: new Date().toISOString()
+      startedDate: new Date().toISOString(),
+      completionDate: null
     };
   }
 
   async markLessonComplete(courseId, lessonId) {
     await this.delay();
     const allProgress = await this.getAllProgress();
-    
-    if (!allProgress[courseId]) {
+if (!allProgress[courseId]) {
       allProgress[courseId] = {
         completedLessons: [],
         quizScores: {},
         bookmarks: [],
         lastAccessed: null,
-        startedDate: new Date().toISOString()
+        startedDate: new Date().toISOString(),
+        completionDate: null
       };
     }
 
@@ -70,11 +73,12 @@ class UserProgressService {
     
     if (!allProgress[courseId]) {
       allProgress[courseId] = {
-        completedLessons: [],
+completedLessons: [],
         quizScores: {},
         bookmarks: [],
         lastAccessed: null,
-        startedDate: new Date().toISOString()
+        startedDate: new Date().toISOString(),
+        completionDate: null
       };
     }
 
@@ -147,6 +151,37 @@ class UserProgressService {
       averageQuizScore: totalQuizzesTaken > 0 ? Math.round(totalScore / totalQuizzesTaken) : 0,
       bookmarksCount: bookmarks.length
     };
+}
+
+  // Check and update course completion
+async checkCourseCompletion(courseId) {
+    await this.delay();
+    
+    const progress = await this.getProgress(courseId);
+    const course = await courseService.getById(courseId);
+    
+    if (!course || !progress) return false;
+    
+    const isCompleted = progress.completedLessons.length >= course.totalLessons;
+    
+    if (isCompleted && !progress.completionDate) {
+      const allProgress = await this.getAllProgress();
+      allProgress[courseId].completionDate = new Date().toISOString();
+      localStorage.setItem(this.storageKey, JSON.stringify(allProgress));
+      
+      // Generate certificate
+      try {
+        const { certificateService } = await import('./certificateService');
+        await certificateService.generate({
+          courseId,
+          completionDate: allProgress[courseId].completionDate
+        });
+      } catch (error) {
+        console.error('Failed to generate certificate:', error);
+      }
+    }
+    
+    return isCompleted;
   }
 }
 

@@ -210,16 +210,27 @@ const MyLearning = () => {
         </motion.div>
       )}
 
-      {/* Completed Courses */}
+{/* Completed Courses */}
       {completedCourses.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
         >
-          <h2 className="text-2xl font-display font-semibold text-white mb-6 flex items-center gap-2">
-            <ApperIcon name="Trophy" size={24} className="text-success" />
-            Completed Courses
-          </h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-display font-semibold text-white flex items-center gap-2">
+              <ApperIcon name="Trophy" size={24} className="text-success" />
+              Completed Courses
+            </h2>
+            <Button
+              onClick={() => navigate('/certificates')}
+              variant="success"
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              <ApperIcon name="Award" size={16} />
+              View Certificates
+            </Button>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {completedCourses.map((course) => (
               <CourseCard
