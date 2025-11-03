@@ -1,0 +1,257 @@
+[
+  {
+    "Id": 1,
+    "title": "JavaScript Fundamentals",
+    "language": "JavaScript",
+    "difficulty": "Beginner",
+    "description": "Learn the core concepts of JavaScript programming, including variables, functions, objects, and control structures. Perfect for beginners starting their coding journey.",
+    "estimatedHours": 8,
+    "totalLessons": 12,
+    "modules": [
+      {
+        "Id": 1,
+        "title": "Getting Started with JavaScript",
+        "order": 1,
+        "lessons": [
+          {
+            "Id": 1,
+            "title": "Introduction to JavaScript",
+            "order": 1,
+            "duration": 15
+          },
+          {
+            "Id": 2,
+            "title": "Variables and Data Types",
+            "order": 2,
+            "duration": 20
+          },
+          {
+            "Id": 3,
+            "title": "Basic Operators",
+            "order": 3,
+            "duration": 18
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "title": "Functions and Control Flow",
+        "order": 2,
+        "lessons": [
+          {
+            "Id": 4,
+            "title": "Writing Functions",
+            "order": 1,
+            "duration": 25
+          },
+          {
+            "Id": 5,
+            "title": "Conditional Statements",
+            "order": 2,
+            "duration": 22
+          },
+          {
+            "Id": 6,
+            "title": "Loops and Iteration",
+            "order": 3,
+            "duration": 28
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "title": "Python for Beginners",
+    "language": "Python",
+    "difficulty": "Beginner",
+    "description": "Start your Python journey with this comprehensive introduction to one of the world's most popular programming languages. Learn syntax, data structures, and problem-solving.",
+    "estimatedHours": 10,
+    "totalLessons": 15,
+    "modules": [
+      {
+        "Id": 3,
+        "title": "Python Basics",
+        "order": 1,
+        "lessons": [
+          {
+            "Id": 7,
+            "title": "Python Syntax and Structure",
+            "order": 1,
+            "duration": 20
+          },
+          {
+            "Id": 8,
+            "title": "Working with Variables",
+            "order": 2,
+            "duration": 18
+          },
+          {
+            "Id": 9,
+            "title": "String Operations",
+            "order": 3,
+            "duration": 22
+          }
+        ]
+      },
+      {
+        "Id": 4,
+        "title": "Data Structures",
+        "order": 2,
+        "lessons": [
+          {
+            "Id": 10,
+            "title": "Lists and Tuples",
+            "order": 1,
+            "duration": 25
+          },
+          {
+            "Id": 11,
+            "title": "Dictionaries and Sets",
+            "order": 2,
+            "duration": 23
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "title": "HTML & CSS Essentials",
+    "language": "HTML/CSS",
+    "difficulty": "Beginner",
+    "description": "Master the building blocks of the web with HTML structure and CSS styling. Create beautiful, responsive websites from scratch.",
+    "estimatedHours": 6,
+    "totalLessons": 10,
+    "modules": [
+      {
+        "Id": 5,
+        "title": "HTML Fundamentals",
+        "order": 1,
+        "lessons": [
+          {
+            "Id": 12,
+            "title": "HTML Structure and Tags",
+            "order": 1,
+            "duration": 25
+          },
+          {
+            "Id": 13,
+            "title": "Forms and Input Elements",
+            "order": 2,
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "Id": 6,
+        "title": "CSS Styling",
+        "order": 2,
+        "lessons": [
+          {
+            "Id": 14,
+            "title": "CSS Selectors and Properties",
+            "order": 1,
+            "duration": 28
+          },
+          {
+            "Id": 15,
+            "title": "Flexbox and Grid Layout",
+            "order": 2,
+            "duration": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "title": "Advanced JavaScript",
+    "language": "JavaScript",
+    "difficulty": "Advanced",
+    "description": "Dive deep into advanced JavaScript concepts including async programming, closures, prototypes, and modern ES6+ features.",
+    "estimatedHours": 12,
+    "totalLessons": 18,
+    "modules": [
+      {
+        "Id": 7,
+        "title": "Advanced Concepts",
+        "order": 1,
+        "lessons": [
+          {
+            "Id": 16,
+            "title": "Closures and Scope",
+            "order": 1,
+            "duration": 30
+          },
+          {
+            "Id": 17,
+            "title": "Promises and Async/Await",
+            "order": 2,
+            "duration": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "title": "Python Data Analysis",
+    "language": "Python",
+    "difficulty": "Intermediate",
+    "description": "Learn to analyze and visualize data using Python libraries like pandas, numpy, and matplotlib. Perfect for aspiring data scientists.",
+    "estimatedHours": 15,
+    "totalLessons": 20,
+    "modules": [
+      {
+        "Id": 8,
+        "title": "Data Manipulation",
+        "order": 1,
+        "lessons": [
+          {
+            "Id": 18,
+            "title": "Introduction to Pandas",
+            "order": 1,
+            "duration": 40
+          },
+          {
+            "Id": 19,
+            "title": "Data Cleaning Techniques",
+            "order": 2,
+            "duration": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "title": "Responsive Web Design",
+    "language": "HTML/CSS",
+    "difficulty": "Intermediate",
+    "description": "Create websites that look great on all devices. Learn advanced CSS techniques, media queries, and modern layout systems.",
+    "estimatedHours": 9,
+    "totalLessons": 14,
+    "modules": [
+      {
+        "Id": 9,
+        "title": "Mobile-First Design",
+        "order": 1,
+        "lessons": [
+          {
+            "Id": 20,
+            "title": "Media Queries and Breakpoints",
+            "order": 1,
+            "duration": 32
+          },
+          {
+            "Id": 21,
+            "title": "Flexible Images and Typography",
+            "order": 2,
+            "duration": 28
+          }
+        ]
+      }
+    ]
+  }
+]

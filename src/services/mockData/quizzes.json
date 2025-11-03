@@ -1,0 +1,126 @@
+[
+  {
+    "Id": 1,
+    "courseId": 1,
+    "moduleId": 1,
+    "title": "JavaScript Basics Quiz",
+    "passingScore": 70,
+    "questions": [
+      {
+        "Id": 1,
+        "text": "Which keyword is used to declare a variable in modern JavaScript?",
+        "code": null,
+        "options": ["var", "let", "const", "Both let and const"],
+        "correctAnswer": 3,
+        "explanation": "Both 'let' and 'const' are used in modern JavaScript. 'let' for variables that can be reassigned, and 'const' for constants."
+      },
+      {
+        "Id": 2,
+        "text": "What will this code output?",
+        "code": "console.log(typeof 42);",
+        "options": ["string", "number", "integer", "undefined"],
+        "correctAnswer": 1,
+        "explanation": "The typeof operator returns 'number' for numeric values, including integers and floats."
+      },
+      {
+        "Id": 3,
+        "text": "Which operator is used for strict equality comparison?",
+        "code": null,
+        "options": ["=", "==", "===", "!="],
+        "correctAnswer": 2,
+        "explanation": "The '===' operator performs strict equality comparison without type conversion."
+      },
+      {
+        "Id": 4,
+        "text": "What is the result of this expression?",
+        "code": "let result = 5 + \"3\";\nconsole.log(result);",
+        "options": ["8", "53", "Error", "undefined"],
+        "correctAnswer": 1,
+        "explanation": "JavaScript performs type coercion, converting the number 5 to a string and concatenating it with '3'."
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "courseId": 1,
+    "moduleId": 2,
+    "title": "Functions and Control Flow Quiz",
+    "passingScore": 70,
+    "questions": [
+      {
+        "Id": 5,
+        "text": "Which statement is used to exit a function and return a value?",
+        "code": null,
+        "options": ["break", "continue", "return", "exit"],
+        "correctAnswer": 2,
+        "explanation": "The 'return' statement is used to exit a function and optionally return a value."
+      },
+      {
+        "Id": 6,
+        "text": "What will this loop output?",
+        "code": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}",
+        "options": ["0, 1, 2", "1, 2, 3", "0, 1, 2, 3", "Error"],
+        "correctAnswer": 0,
+        "explanation": "The loop starts at 0, continues while i < 3, and increments i each iteration."
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "courseId": 2,
+    "moduleId": 3,
+    "title": "Python Basics Quiz",
+    "passingScore": 70,
+    "questions": [
+      {
+        "Id": 7,
+        "text": "Which function is used to display output in Python?",
+        "code": null,
+        "options": ["console.log()", "print()", "echo()", "display()"],
+        "correctAnswer": 1,
+        "explanation": "The print() function is used to display output to the console in Python."
+      },
+      {
+        "Id": 8,
+        "text": "What is the correct way to create a variable in Python?",
+        "code": null,
+        "options": ["let x = 5", "var x = 5", "x = 5", "int x = 5"],
+        "correctAnswer": 2,
+        "explanation": "Python uses simple assignment without variable declaration keywords."
+      },
+      {
+        "Id": 9,
+        "text": "How do you create a comment in Python?",
+        "code": null,
+        "options": ["// comment", "/* comment */", "# comment", "<!-- comment -->"],
+        "correctAnswer": 2,
+        "explanation": "Python uses the # symbol for single-line comments."
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "courseId": 3,
+    "moduleId": 5,
+    "title": "HTML Fundamentals Quiz",
+    "passingScore": 70,
+    "questions": [
+      {
+        "Id": 10,
+        "text": "Which tag is used to create the largest heading?",
+        "code": null,
+        "options": ["<h6>", "<h1>", "<header>", "<title>"],
+        "correctAnswer": 1,
+        "explanation": "<h1> creates the largest heading in HTML, with headings getting smaller from h1 to h6."
+      },
+      {
+        "Id": 11,
+        "text": "What does this HTML code create?",
+        "code": "<a href=\"https://example.com\">Click here</a>",
+        "options": ["A button", "A link", "An image", "A paragraph"],
+        "correctAnswer": 1,
+        "explanation": "The <a> tag with href attribute creates a hyperlink."
+      }
+    ]
+  }
+]

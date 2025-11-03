@@ -1,0 +1,77 @@
+[
+  {
+    "Id": 1,
+    "title": "Introduction to JavaScript",
+    "content": "# Introduction to JavaScript\n\nJavaScript is a versatile, high-level programming language that brings interactivity to web pages. Originally created to make websites dynamic, JavaScript has evolved into a powerful language used for web development, server-side programming, mobile app development, and much more.\n\n## What is JavaScript?\n\nJavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. It's one of the three core technologies of web development alongside HTML and CSS.\n\n## Why Learn JavaScript?\n\n- **Versatility**: Use it for frontend, backend, mobile, and desktop applications\n- **Popular**: One of the most widely used programming languages\n- **Active Community**: Extensive resources and support available\n- **Career Opportunities**: High demand for JavaScript developers\n\n## Getting Started\n\nJavaScript code can be embedded directly in HTML or written in separate files. You can run JavaScript in any web browser, making it accessible and easy to experiment with.\n\n## Key Features\n\n- Dynamic typing\n- First-class functions\n- Prototype-based object orientation\n- Event-driven programming\n- Asynchronous programming support",
+    "codeExamples": [
+      {
+        "language": "javascript",
+        "code": "// Your first JavaScript program\nconsole.log(\"Hello, JavaScript!\");\n\n// Variables and basic operations\nlet message = \"Welcome to programming!\";\nlet number = 42;\nlet isLearning = true;\n\nconsole.log(message);\nconsole.log(\"The answer is:\", number);",
+        "explanation": "This example shows basic JavaScript syntax including console output and variable declarations.",
+        "runnable": true
+      }
+    ],
+    "duration": 15,
+    "order": 1
+  },
+  {
+    "Id": 2,
+    "title": "Variables and Data Types",
+    "content": "# Variables and Data Types\n\nVariables are containers that store data values. In JavaScript, you can create variables using `var`, `let`, or `const` keywords. Understanding data types is crucial for writing effective JavaScript code.\n\n## Variable Declarations\n\n### let\nUse `let` for variables that can be reassigned:\n\n### const\nUse `const` for variables that won't be reassigned:\n\n### var\nOlder way of declaring variables (avoid in modern code):\n\n## JavaScript Data Types\n\nJavaScript has several built-in data types:\n\n### Primitive Types\n- **Number**: Integers and floating-point numbers\n- **String**: Text data enclosed in quotes\n- **Boolean**: True or false values\n- **Undefined**: Variable declared but not assigned\n- **Null**: Intentionally empty value\n- **Symbol**: Unique identifiers (ES6+)\n- **BigInt**: Large integers (ES2020+)\n\n### Non-Primitive Types\n- **Object**: Collections of key-value pairs\n- **Array**: Ordered lists of values\n- **Function**: Reusable blocks of code\n\n## Type Checking\n\nUse the `typeof` operator to check the type of a variable.",
+    "codeExamples": [
+      {
+        "language": "javascript",
+        "code": "// Variable declarations\nlet age = 25;           // Number\nlet name = \"Alice\";     // String\nlet isStudent = true;   // Boolean\nlet score;              // Undefined\nlet data = null;        // Null\n\n// Arrays and Objects\nlet colors = [\"red\", \"green\", \"blue\"];\nlet person = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n  age: 30\n};\n\n// Type checking\nconsole.log(typeof age);      // \"number\"\nconsole.log(typeof name);     // \"string\"\nconsole.log(typeof isStudent); // \"boolean\"",
+        "explanation": "This example demonstrates different data types and how to check types using the typeof operator.",
+        "runnable": true
+      }
+    ],
+    "duration": 20,
+    "order": 2
+  },
+  {
+    "Id": 3,
+    "title": "Basic Operators",
+    "content": "# Basic Operators\n\nOperators are symbols that perform operations on values and variables. JavaScript provides several types of operators for different purposes.\n\n## Arithmetic Operators\n\n- `+` Addition\n- `-` Subtraction  \n- `*` Multiplication\n- `/` Division\n- `%` Modulo (remainder)\n- `**` Exponentiation\n- `++` Increment\n- `--` Decrement\n\n## Comparison Operators\n\n- `==` Equal to (with type conversion)\n- `===` Strictly equal to (without type conversion)\n- `!=` Not equal to\n- `!==` Strictly not equal to\n- `>` Greater than\n- `<` Less than\n- `>=` Greater than or equal to\n- `<=` Less than or equal to\n\n## Logical Operators\n\n- `&&` Logical AND\n- `||` Logical OR\n- `!` Logical NOT\n\n## Assignment Operators\n\n- `=` Assignment\n- `+=` Addition assignment\n- `-=` Subtraction assignment\n- `*=` Multiplication assignment\n- `/=` Division assignment",
+    "codeExamples": [
+      {
+        "language": "javascript",
+        "code": "// Arithmetic operators\nlet a = 10;\nlet b = 3;\n\nconsole.log(a + b);   // 13\nconsole.log(a - b);   // 7\nconsole.log(a * b);   // 30\nconsole.log(a / b);   // 3.333...\nconsole.log(a % b);   // 1\nconsole.log(a ** b);  // 1000\n\n// Comparison operators\nconsole.log(a > b);   // true\nconsole.log(a === 10); // true\nconsole.log(a !== b); // true\n\n// Logical operators\nlet x = true;\nlet y = false;\nconsole.log(x && y);  // false\nconsole.log(x || y);  // true\nconsole.log(!x);      // false",
+        "explanation": "This example shows various operators in action and their results.",
+        "runnable": true
+      }
+    ],
+    "duration": 18,
+    "order": 3
+  },
+  {
+    "Id": 7,
+    "title": "Python Syntax and Structure",
+    "content": "# Python Syntax and Structure\n\nPython is known for its clean, readable syntax that emphasizes code readability and simplicity. Understanding Python's structure is essential for writing effective programs.\n\n## Python Philosophy\n\nPython follows the principle of \"beautiful is better than ugly\" and \"simple is better than complex.\" This philosophy is reflected in its syntax design.\n\n## Key Syntax Rules\n\n### Indentation\nPython uses indentation to define code blocks instead of curly braces:\n\n### Case Sensitivity\nPython is case-sensitive. `Variable` and `variable` are different.\n\n### Comments\n- Single-line comments start with `#`\n- Multi-line comments use triple quotes `\"\"\"`\n\n## Basic Structure\n\nA Python program consists of statements executed from top to bottom. You can organize code using functions, classes, and modules.\n\n## Print Function\n\nThe `print()` function is used to display output to the console.\n\n## Input Function\n\nThe `input()` function reads input from the user.",
+    "codeExamples": [
+      {
+        "language": "python",
+        "code": "# This is a single-line comment\n\"\"\"\nThis is a\nmulti-line comment\n\"\"\"\n\n# Basic print statements\nprint(\"Hello, Python!\")\nprint(\"Welcome to programming\")\n\n# Variables (no declaration needed)\nname = \"Python\"\nversion = 3.9\nis_awesome = True\n\n# Print with variables\nprint(f\"Language: {name}\")\nprint(f\"Version: {version}\")\nprint(f\"Is awesome: {is_awesome}\")\n\n# Basic arithmetic\nresult = 10 + 5 * 2\nprint(f\"Result: {result}\")",
+        "explanation": "This example shows Python's basic syntax including comments, variables, and the print function with f-string formatting.",
+        "runnable": true
+      }
+    ],
+    "duration": 20,
+    "order": 1
+  },
+  {
+    "Id": 12,
+    "title": "HTML Structure and Tags",
+    "content": "# HTML Structure and Tags\n\nHTML (HyperText Markup Language) is the standard markup language for creating web pages. It provides the structure and content of web documents using elements and tags.\n\n## Basic HTML Structure\n\nEvery HTML document follows a basic structure:\n\n## Common HTML Tags\n\n### Text Content\n- `<h1>` to `<h6>`: Headings (largest to smallest)\n- `<p>`: Paragraphs\n- `<span>`: Inline text container\n- `<br>`: Line break\n- `<hr>`: Horizontal rule\n\n### Text Formatting\n- `<strong>`: Important text (bold)\n- `<em>`: Emphasized text (italic)\n- `<mark>`: Highlighted text\n- `<small>`: Smaller text\n\n### Lists\n- `<ul>`: Unordered list\n- `<ol>`: Ordered list  \n- `<li>`: List item\n\n### Links and Images\n- `<a>`: Anchor (links)\n- `<img>`: Images\n\n## Attributes\n\nHTML elements can have attributes that provide additional information:\n- `id`: Unique identifier\n- `class`: CSS class name\n- `src`: Source URL (for images)\n- `href`: Link destination\n- `alt`: Alternative text",
+    "codeExamples": [
+      {
+        "language": "html",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My First Web Page</title>\n</head>\n<body>\n    <header>\n        <h1>Welcome to My Website</h1>\n        <nav>\n            <a href=\"#about\">About</a>\n            <a href=\"#contact\">Contact</a>\n        </nav>\n    </header>\n    \n    <main>\n        <section id=\"about\">\n            <h2>About Me</h2>\n            <p>This is a <strong>paragraph</strong> with <em>emphasized text</em>.</p>\n            <ul>\n                <li>HTML Basics</li>\n                <li>CSS Styling</li>\n                <li>JavaScript Programming</li>\n            </ul>\n        </section>\n    </main>\n    \n    <footer>\n        <p>&copy; 2024 My Website</p>\n    </footer>\n</body>\n</html>",
+        "explanation": "This example shows a complete HTML document structure with common tags and semantic elements.",
+        "runnable": false
+      }
+    ],
+    "duration": 25,
+    "order": 1
+  }
+]
